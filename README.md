@@ -1,54 +1,54 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# freedomwhare.co.nz
 
-## 🚀 Quick start
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-1.  **Create a Gatsby site.**
+<!--
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0a51d0e9-f611-4dd8-887f-fc1889e68540/deploy-status)]
+(https://app.netlify.com/sites/tania/deploys)
+-->
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+- [freedomwhare.co.nz](#freedomwhareconz)
+  - [Gatsby, React & Netlify(+CMS)](#gatsby-react--netlifycms)
+  - [Details](#details)
+  - [License](#license)
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+The architecture for this project is inspired by
+[@taniarascia](https://www.taniarascia.com/), every time I read one of her
+website update blogs I get pretty excited about finally trying a React project.
 
-2.  **Start developing.**
+## Gatsby, React & Netlify(+CMS)
 
-    Navigate into your new site’s directory and start it up.
+My first project was **Angular** (gross, btw,) my second was **Vue** (better,
+but I also didn't appreciate not knowing what was going on the majority of the
+time,) then came **Nuxt.js**, since Vue was okay, but again, I had the same
+problem.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+Finally I started a project in **Svelte** and really enjoyed that experience.
+[TailwindCSS](https://tailwindcss.com/)
+[JIT](https://tailwindcss.com/docs/just-in-time-mode) was introduced too, so my
+build times were fast as anything, and really simple static sites are a joy to
+write in Svelte, with [SvelteKit](https://kit.svelte.dev/) btw. Compiling a
+static website in vanilla JS was sweet.
 
-3.  **Open the code and start customizing!**
+Now I'm having a foray into the world of [**React**] & [**Gatsby**]. It's
+probably now the oldest of the frameworks that I've used, which is a plus in one
+sense since it's mature and has a vibrant ecosystem, but a negative in the sense
+that it's likely bloated and full of workarounds / hacks. Ah well, can't get too
+bogged down in the detail...
 
-    Your site is now running at http://localhost:8000!
+## Details
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+I'm not too big on testing on this project since it's only small in scale, but I
+am big on linting, so we've got a good suite of linters here:
 
-4.  **Learn more**
+- ESLint
+- Stylelint
+- Prettier
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+We're also using Yarn, Netlify and NetlifyCMS. A tailwind.config.js exists just
+for reference, since I've been used to using Tailwind for so long that the
+colours they define are good with me.
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## License
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+This project is open source and available under the [MIT License](LICENSE).
