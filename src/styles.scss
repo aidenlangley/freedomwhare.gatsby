@@ -1,0 +1,12 @@
+/* Global styles, mostly browser resets */
+button {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+ul li ul {
+  margin-left: 0;
+  padding-left: 0;
+}

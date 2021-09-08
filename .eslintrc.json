@@ -1,23 +1,13 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "prettier"
-    ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 12,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-    }
+  "globals": {
+    "__PATH_PREFIX__": true
+  },
+  "extends": ["react-app", "prettier"],
+  "rules": {
+    "jsx-a11y/accessible-emoji": 0,
+    "jsx-a11y/iframe-has-title": 0,
+    "no-unused-vars": 1,
+    "import/no-unresolved": 0,
+    "no-const-assign": 1
+  }
 }

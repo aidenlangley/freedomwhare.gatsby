@@ -1,12 +1,13 @@
 node_modules/
+.yarn/
 .cache/
-public
+public/
+static/
 
-# Yarn, Zero-Installs
-.yarn/*
-!.yarn/cache
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+# npm
+package.json
+package-lock.json
+yarn.lock
+
+# IDE
+.vscode/

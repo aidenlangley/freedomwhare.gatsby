@@ -1,0 +1,20 @@
+.header {
+  align-items: center;
+  column-gap: 1rem;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 3em max-content auto; /* 10% auto 40% */
+  justify-items: start;
+  margin: 1rem;
+
+  > img {
+    height: 3em;
+    width: 3em;
+  }
+
+  > button {
+    background-color: rgba(0, 0, 0, 0);
+    height: 3em;
+    width: 3em;
+  }
+}

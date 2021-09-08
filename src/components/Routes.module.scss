@@ -1,0 +1,10 @@
+.list {
+  column-gap: 0.5rem;
+  display: inline-grid;
+  grid-auto-flow: column;
+  list-style-type: none;
+
+  > li > .active {
+    font-weight: bold;
+  }
+}

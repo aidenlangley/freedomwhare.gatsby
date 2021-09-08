@@ -1,0 +1,22 @@
+/* Responsiveness & fonts */
+@import '../css/screens';
+@import '../css/fonts';
+
+/* Themes */
+@import '../css/themes/light';
+@import '../css/themes/dark';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background-color);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  margin: 0;
+}

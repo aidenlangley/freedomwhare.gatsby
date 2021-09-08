@@ -16,6 +16,5 @@
     "enableAutoDiscovery": true
   },
   "allowJS": true,
-  "include": ["src/**/*.js", "src/**/*.jsx"],
-  "exclude": ["node_modules", ".yarn", ".cache", "public"]
+  "include": ["src/**/*.js", "src/**/*.jsx"]
 }
