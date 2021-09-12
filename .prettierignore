@@ -3,9 +3,7 @@ node_modules/
 .cache/
 public/
 
-# npm
+# npm/yarn
 package-lock.json
 yarn.lock
-
-# IDE
-.vscode/
+.pnp.cjs

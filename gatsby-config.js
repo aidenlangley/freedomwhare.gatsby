@@ -9,22 +9,22 @@ module.exports = {
     description:
       'Freedom Whare; Whare to the Whenua. Housing solutions for tangata ' +
       'whenua and Aotearoa.',
-    logo: 'https://freedomwhare.co.nz/logo.png',
+    // logo: 'https://freedomwhare.co.nz/logo.png',
   },
   plugins: [
     /* Meta */
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        icon: 'static/logo.png',
-      },
-    },
+    // 'gatsby-plugin-manifest',
+    // {
+    //   resolve: 'gatsby-plugin-manifest',
+    //   options: {
+    //     icon: 'static/logo.png',
+    //   },
+    // },
 
     /* Hosting */
     'gatsby-plugin-netlify',
-    'gatsby-plugin-netlify-cms',
 
     /* Analytics */
     {
@@ -34,8 +34,21 @@ module.exports = {
       },
     },
 
-    /* CSS */
-    'gatsby-plugin-sass',
+    /* PostCSS */
+    {
+      resolve: 'gatsby-plugin-postcss',
+      options: {
+        postCssPlugins: [
+          require('postcss-import'),
+          require(`postcss-preset-env`),
+          // require('postcss-nesting'),
+          process.env.NODE_ENV !== 'development' &&
+            require('cssnano')({
+              preset: 'default',
+            }),
+        ],
+      },
+    },
 
     /* Images */
     'gatsby-plugin-image',

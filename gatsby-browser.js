@@ -1,3 +1,5 @@
+import './static/css/tailwind-normalize.css'
+
 const React = require('react')
 
 export function wrapPageElement({ element, props }) {

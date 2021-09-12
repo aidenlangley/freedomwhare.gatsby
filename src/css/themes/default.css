@@ -1,0 +1,8 @@
+@import '../colors.css';
+
+:root {
+  .theme {
+    --primary: var(--blue-6);
+    --background-color: var(--gray-1);
+  }
+}

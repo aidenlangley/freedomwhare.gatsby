@@ -1,21 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import Helmet from 'react-helmet'
-import favicon from '../../static/favicon.png'
-import { Header } from '../components/Header'
-import '../styles.scss'
-import './Layout.scss'
+import { Routes } from '../components/Routes'
+import { Slider } from '../components/Slider'
+import gatsby from '../images/gatsby.png'
+import * as styles from './layout.module.css'
 
 /**
- * Toggle dark theme on or off. Sets `dark` item in `localStorage`.
- * @param {boolean} toggle Toggles dark theme on or off.
+ * Builds a string of classes for the grid & theming.
+ * @param {boolean} dark `Dark` state.
+ * @returns A string of classes.
  */
-function toggleDarkTheme(toggle) {
-  localStorage.setItem('dark', toggle)
-  toggleDark(true)
-}
-
-function buildClasses(dark) {
-  let classes = 'root theme'
+function classes(dark) {
+  let classes = `${styles.root} theme`
   if (dark) {
     classes += ' dark'
   }
@@ -29,32 +25,58 @@ function buildClasses(dark) {
  * @returns `DefaultLayout` component containing children components.
  */
 export const Layout = ({ children }) => {
-  const [dark, toggleDark] = useState(false)
-
-  /**
-   * When children toggle dark theme on or off, this method is called.
-   * @param {boolean} toggle
-   */
-  const onToggleDark = (toggle) => {
-    toggle ? toggleDarkTheme(true) : toggleDarkTheme(false)
-  }
+  const [dark, toggle] = useState(false)
 
   /** Runs on init. */
   useEffect(() => {
     if (localStorage.getItem('dark') === 'true') {
-      toggleDarkTheme(true)
+      toggle(true)
     }
   }, [])
 
   return (
     <>
+      {/* SEO & metadata */}
       <Helmet>
-        <link rel="shortcut icon" type="image/png" href={favicon} />
+        <link rel="shortcut icon" type="image/png" href={gatsby} />
       </Helmet>
 
-      <div className={buildClasses(dark)}>
-        <Header />
-        <main>{children}</main>
+      {/* Root `div`, controls theme */}
+      <div className={classes(dark)}>
+        {/* Logo & dark toggle */}
+        <header>
+          <img src={gatsby} alt="Gatsby logo" className={styles.logo} />
+          <Slider
+            id="dark-toggle"
+            value={dark}
+            className={styles.toggle}
+            action={() => {
+              localStorage.setItem('dark', !dark)
+              toggle(!dark)
+            }}
+            label="dark theme"
+            ariaLabel="toggle dark theme on or off"
+          />
+        </header>
+
+        {/* Navigation */}
+        <aside>
+          <nav>
+            <Routes />
+          </nav>
+        </aside>
+
+        {/* Main content */}
+
+        <main>
+          <div>
+            <h1>main</h1>
+            {children}
+          </div>
+        </main>
+
+        {/* Informative footer */}
+        <footer>footer</footer>
       </div>
     </>
   )

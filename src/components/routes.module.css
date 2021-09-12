@@ -1,0 +1,29 @@
+@import '../css/colors.css';
+@import '../css/themes/default.css';
+@import '../css/themes/dark.css';
+
+.routes {
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 0.25rem;
+  list-style-type: none;
+}
+
+.routes li :first-child {
+  --icon-size: 1.5rem;
+
+  /* Grid */
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.5rem;
+  place-items: center;
+
+  /* Icon */
+  height: var(--icon-size);
+  width: var(--icon-size);
+}
+
+.active {
+  font-weight: bold;
+}
